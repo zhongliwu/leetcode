@@ -1,2 +1,2 @@
 # leetcode
-my leetcode code, written in Python
+my leetcode algorithm code, written in Python
