@@ -5,6 +5,7 @@ from arrays import RemoveElement as re
 # import sys
 # from os.path import dirname, abspath, join
 
+
 class Test27RemoveElement:
     @pytest.fixture
     def get_solution_class(self):
@@ -24,7 +25,7 @@ class Test27RemoveElement:
         r_hat = s.q27RemoveElement(nums, val)
         assert r_hat == 0
     
-    def test_pre_exampt(self, get_solution_class):
+    def test_pre_exempt(self, get_solution_class):
         nums = [1, 1, 2, 2, 3]
         val = 1
         s = get_solution_class
