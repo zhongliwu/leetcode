@@ -15,19 +15,19 @@ class Test27RemoveElement:
         nums = []
         val = 0
         s = get_solution_class
-        r_hat = s.q27RemoveElement(nums, val)
+        r_hat = s.q27_remove_element(nums, val)
         assert r_hat == 0
     
     def test_edges(self, get_solution_class):
         nums = [0]
         val = 0
         s = get_solution_class
-        r_hat = s.q27RemoveElement(nums, val)
+        r_hat = s.q27_remove_element(nums, val)
         assert r_hat == 0
     
     def test_pre_exempt(self, get_solution_class):
         nums = [1, 1, 2, 2, 3]
         val = 1
         s = get_solution_class
-        r_hat = s.q27RemoveElement(nums, val)
+        r_hat = s.q27_remove_element(nums, val)
         assert r_hat == 3
