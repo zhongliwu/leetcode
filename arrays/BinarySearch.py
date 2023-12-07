@@ -49,27 +49,19 @@ class BinarySearch:
         if a is None or len(a) == 0:
             return -1
 
-        left, right = 0, len(a) - 1
+        left, right, end = 0, len(a) - 1, len(a) - 1
         while left + 1 < right:
             mid = (left + right) // 2
             if a[mid] == target:
                 return mid
-            elif a[right] == target:
-                return right
-            elif a[mid] > a[right]:
-                if a[mid] > target:
-                    if a[right] > target:
-                        left = mid
-                    else:
-                        right = mid
+            elif a[0] <= a[mid]:
+                if (a[0] <= target) and (a[mid] > target):
+                    right = mid
                 else:
                     left = mid
-            elif a[mid] < a[right]:
-                if a[mid] < target:
-                    if a[right] > target:
-                        left = mid
-                    else:
-                        right = mid
+            elif a[mid] <= a[end]:
+                if (a[mid] < target) and (a[end] >= target):
+                    left = mid
                 else:
                     right = mid
 
