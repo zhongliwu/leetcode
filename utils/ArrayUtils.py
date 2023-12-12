@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*--
 
-
 def compare_arr(array_a: list[int], array_b: list[int]) -> bool:
     if len(array_a) != len(array_b):
         return False
