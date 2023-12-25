@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from utils import (
-    Tree as tr
-)
+from utils.Tree import TreeNode
 
 
 def subtree_sum(root):
@@ -26,7 +24,7 @@ def subtree_sum(root):
     return node_sum, node_sum, root
 
 
-def find_subtree(root: tr.TreeNode) -> tr.TreeNode:
+def find_subtree(root: TreeNode) -> TreeNode:
     root_sum, max_sum, max_node = subtree_sum(root)
     return max_node
 
