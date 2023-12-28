@@ -12,16 +12,16 @@ def dfs(results: List[List[int]], sub_set: List[int], start_idx: int, nums: List
         new_sub_set.append(nums[i])
         dfs(results, new_sub_set, i + 1, nums)
 
-# TODO: python's recursion seems to have a problem in this case, need to be reviewed later
-# def dfs_ii(results: List[List[int]], sub_set: List[int], start_idx: int, nums: List[int]):
-#     if start_idx == len(nums):
-#         results.append(sub_set.copy())
-#         return
-#
-#     sub_set.append(nums[start_idx])
-#     dfs_ii(results, sub_set, start_idx + 1, nums)
-#     sub_set = sub_set[: -1]
-#     dfs_ii(results, sub_set, start_idx + 1, nums)
+
+def dfs_ii(results: List[List[int]], sub_set: List[int], start_idx: int, nums: List[int]):
+    if start_idx == len(nums):
+        results.append(sub_set.copy())
+        return
+
+    sub_set.append(nums[start_idx])
+    dfs_ii(results, sub_set, start_idx + 1, nums)
+    sub_set[:] = sub_set[: -1]
+    dfs_ii(results, sub_set, start_idx + 1, nums)
 
 
 """
