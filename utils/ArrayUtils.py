@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*--
 import copy
+from utils.Graph import Interval
 from typing import (
     List,
 )
@@ -33,3 +34,20 @@ def compare_compound_lists(list_a: List[List[int]], list_b: List[List[int]]):
             return False
     return True
 
+
+# compare interval lists
+def compare_interval_lists(list_a: List[Interval], list_b: List[Interval]):
+    if len(list_a) != len(list_b):
+        return False
+
+    for i in range(0, len(list_b)):
+        if list_a[i].start != list_b[i].start:
+            return False
+        if list_a[i].end != list_b[i].end:
+            return False
+
+    return True
+
+
+if __name__ == '__main__':
+    compare_interval_lists([], [])
